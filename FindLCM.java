@@ -1,13 +1,15 @@
 import java.util.Scanner;
+
 public class FindLCM {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter first number: ");
-        int a = sc.nextInt();
-        System.out.print("Enter second number: ");
-        int b = sc.nextInt();
-        int lcm = (a * b) / FindGCD(a, b);
-        System.out.println("LCM: " + lcm);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter First Number: ");
+            int a = sc.nextInt();
+            System.out.print("Enter Second Number: ");
+            int b = sc.nextInt();
+            int lcm = (a * b) / FindGCD(a, b);
+            System.out.println("LCM: " + lcm);
+        }
     }
     static int FindGCD(int a, int b) {
         int gcd = 1;
